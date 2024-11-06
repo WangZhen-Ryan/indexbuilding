@@ -102,19 +102,34 @@
 
 .navbar .nav-links a {
   text-decoration: none;
-  font-size: 1.2rem;
-  background: linear-gradient(to right, #000000, #ffffff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  padding: 10px 20px;  /* Adds more padding to make the hover area larger */
-  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333; /* Neutral color for text */
+  padding: 0 10px; /* Minimal padding to space out */
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Position underline just below text */
+  width: 0;
+  height: 2px;
+  background-color: #3498db; /* Light blue color for underline */
+  transition: width 0.3s ease;
 }
 
 .navbar .nav-links a:hover {
-  transform: scale(2.0);  /* Enlarges the text on hover */
-  color: #3498db;  /* Optional color change */
+  color: #3498db; /* Matches underline color */
 }
+
+.navbar .nav-links a:hover::after {
+  width: 100%; /* Expands underline on hover */
+}
+
+
 
 .footer {
   background-color: #1c1c1c; /* Dark background color */
