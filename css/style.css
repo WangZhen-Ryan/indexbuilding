@@ -6,11 +6,17 @@
 }
 
 body {
+  background-color: #f4f4f4;
   font-family: Arial, sans-serif;
 }
 
 /* Navbar */
 .navbar {
+  position: fixed;
+  top: 0; /* 顶部对齐 */
+    left: 0;
+    width: 100%; /* 全宽 */
+    z-index: 1000; /* 保证导航栏在页面的其他元素上层 */
   background-color: #f4f4f4;
   padding: 10px 20px;
 }
@@ -508,14 +514,18 @@ body {
   margin-top: 100px;
   padding: 100px;
 }
+.project-page {
+  background-color: #f4f4f4;
+  text-align: center;
+  margin-top: calc(10px + var(--nav-height)); /* 留出10px的间距 */
+}
 
 }
 
 
 
 .gallery {
-  margin: 100px;
-  padding: 50px;
+  background-color: #f4f4f4;
   text-align: center;
 }
 
@@ -530,6 +540,14 @@ body {
   gap: 15px;
 }
 
+
+.project-page {
+  background-color: #f4f4f4;
+  text-align: center;
+  margin-top: calc(50px + var(--nav-height)); /* 留出10px的间距 */
+}
+
+
 .gallery-item {
   background: #f9f9f9;
   border-radius: 8px;
@@ -538,34 +556,113 @@ body {
   text-align: center;
 }
 
-.gallery-item img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.gallery-item img{
+  width: 90%; /* 图片宽度适应容器 */
+  height: 90%; /* 图片高度适应容器 */
+  object-fit: cover; /* 确保图片以适合比例填充框框 */
+  display: block;
 }
 
-.gallery-item h3 {
+
+.photo-grid-item {
   margin-top: 10px;
-  font-size: 1.2rem;
-  color: #333;
+  display: flex;
+  flex-wrap: wrap; /* 防止过窄的屏幕导致布局失衡 */
+  align-items: center;
+  gap: 15px;
 }
 
 
-.project-details {
-  margin: 100px;
-  padding: 50px;
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 15px;
-}
-
-.photo-grid img {
-  width: 100%;
+/* 默认：图片在左，描述在右 */
+.photo-grid-item img {
+  width: 40%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   object-fit: cover;
+}
+
+.photo-grid-item .photo-description {
+  flex: 1;
+  text-align: left;
+}
+
+.photo-grid-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+}
+
+.photo-grid-item p {
+  color: #777;
+  margin: 0;
+}
+
+/* 奇数项：图片在右，描述在左 */
+.photo-grid-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+
+/*  Gallery Banner */
+.gallery-banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-banner ul {
+  position: absolute;
+}
+
+.gallery-banner ul li {
+  width: 100%;
+  height: 560px;
+  float: left;
+  background: no-repeat center center;
+}
+
+.gallery-banner ol {
+  height: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  border-radius: 10px;
+}
+
+.gallery-banner ol li {
+  width: 10px;
+  height: 10px;
+  float: left;
+  margin: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.gallery-banner ol .current {
+  background: rgba(255, 255, 255, 1);
+}
+
+.gallery-banner .left, .gallery-banner .right {
+  width: 58px;
+  height: 120px;
+  position: absolute;
+  top: 50%;
+  margin-top: -60px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.31);
+}
+
+.gallery-banner .left {
+  left: 60px;
+}
+
+.gallery-banner .right {
+  right: 60px;
+}
+
+:root {
+  --nav-height: 70px; /* 根据实际导航栏高度调整 */
 }

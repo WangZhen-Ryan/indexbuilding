@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery - Index Building</title>
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  const menuIcon = document.querySelector('.menu-icon');
+  navLinks.classList.toggle('active');
+
+  // Toggle between hamburger and close icon
+  if (navLinks.classList.contains('active')) {
+      menuIcon.innerHTML = '&times;'; // Close icon
+  } else {
+      menuIcon.innerHTML = '&#9776;'; // Hamburger icon
+  }
+}
+  </script>
 </head>
 <body>
   <header>
@@ -32,39 +46,38 @@
       <h1>Our Projects</h1>
       <div class="gallery-grid">
        
-          <a href="project.html" class="gallery-item">
+          <a href="project.html?id=1" class="gallery-item">
+            <h3>Villa Sereno</h3>
           <img src="images/gallery/1.png" alt="Villa Sereno">
-          <h3>Villa Sereno</h3>
+         
           </a>
     
-          <a href="project.html" class="gallery-item">
-            <img src="images/gallery/1.png" alt="Villa Sereno">
+          <a href="project.html?id=2" class="gallery-item">
             <h3>Villa Sereno</h3>
+            <img src="images/gallery/2.png" alt="Villa Sereno">
+           
             </a>
-            <a href="project.html" class="gallery-item">
-              <img src="images/gallery/1.png" alt="Villa Sereno">
+            <a href="project.html?id=3" class="gallery-item">
               <h3>Villa Sereno</h3>
+              <img src="images/gallery/3.png" alt="Villa Sereno">
+             
               </a>
-              <a href="project.html" class="gallery-item">
-                <img src="images/gallery/1.png" alt="Villa Sereno">
+              <a href="project.html?id=4" class="gallery-item">
                 <h3>Villa Sereno</h3>
+                <img src="images/gallery/4.png" alt="Villa Sereno">
+               
                 </a>
-                <a href="project.html" class="gallery-item">
-                  <img src="images/gallery/1.png" alt="Villa Sereno">
+                <a href="project.html?id=5" class="gallery-item">
                   <h3>Villa Sereno</h3>
+                  <img src="images/gallery/5.png" alt="Villa Sereno">
+                  
                   </a>
-                  <a href="project.html" class="gallery-item">
-                    <img src="images/gallery/1.png" alt="Villa Sereno">
+                  <a href="project.html?id=6" class="gallery-item">
                     <h3>Villa Sereno</h3>
+                    <img src="images/gallery/6.png" alt="Villa Sereno">
+                   
                     </a>
-                    <a href="project.html" class="gallery-item">
-                      <img src="images/gallery/1.png" alt="Villa Sereno">
-                      <h3>Villa Sereno</h3>
-                      </a>
-                      <a href="project.html" class="gallery-item">
-                        <img src="images/gallery/1.png" alt="Villa Sereno">
-                        <h3>Villa Sereno</h3>
-                        </a>
+                  
       </div>
     </section>
   

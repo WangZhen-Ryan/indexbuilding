@@ -7,6 +7,21 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="jquery-3.1.1.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/galleryScript.js"></script>
+  <script>
+    function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  const menuIcon = document.querySelector('.menu-icon');
+  navLinks.classList.toggle('active');
+
+  // Toggle between hamburger and close icon
+  if (navLinks.classList.contains('active')) {
+      menuIcon.innerHTML = '&times;'; // Close icon
+  } else {
+      menuIcon.innerHTML = '&#9776;'; // Hamburger icon
+  }
+}
+  </script>
 
 </head>
 <body>
@@ -28,21 +43,8 @@
     </nav>
  </header>
 
-  <section class="project-details">
-    <h1>Hikari House</h1>
-    <p>
-      An architectural home with a hint of Japanese flair and an abundance of natural light. 
-      The home provides a brilliant facade and a stunning entryway finished with Wee Jasper Blue Stone, 
-      exposed beams, and blackbutt timber.
-    </p>
-    <div class="photo-grid fade">
-      <img src="images/gallery/1.png" alt="Hikari House Image 1">
-      <img src="images/gallery/1.png" alt="Hikari House Image 2">
-      <img src="images/gallery/1.png" alt="Hikari House Image 1">
-      <img src="images/gallery/1.png" alt="Hikari House Image 2">
-      <img src="images/gallery/1.png" alt="Hikari House Image 1">
-      <img src="images/gallery/1.png" alt="Hikari House Image 2">
-    </div>
+  <section id="project-page" class="project-page">
+    
   </section>
 
 
