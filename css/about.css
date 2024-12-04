@@ -1,0 +1,281 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #3498db;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links .active::after {
+  width: 100%;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* About Page */
+.about-page {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about-header {
+  margin-bottom: 40px;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* About Content */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.about-text {
+  flex: 1 1 50%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.about-text ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about-text ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.about-text ul li strong {
+  color: #333;
+}
+
+.about-image {
+  flex: 1 1 40%;
+  max-width: 500px;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.mission,
+.vision {
+  flex: 1 1 45%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.mission h2,
+.vision h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.mission p,
+.vision p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  background-color: #1c1c1c;
+  color: #d3b28b;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 30%;
+  max-width: 300px;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #d3b28b;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  color: #d3b28b;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #a0a0a0;
+}
+
+.footer-bottom a {
+  color: #d3b28b;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-text {
+      text-align: center;
+  }
+
+  .mission-vision {
+      flex-direction: column;
+  }
+
+  .navbar .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: #ffffff;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar .nav-links.active {
+      display: flex;
+  }
+
+  .menu-icon {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+  }
+}

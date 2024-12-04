@@ -1,0 +1,122 @@
+/* Services Page */
+.services-page {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services-header {
+  margin-bottom: 40px;
+}
+
+.services-header h1 {
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.services-header p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Service Category */
+.service-category {
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.service-category h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #3498db; /* Highlighted section title */
+  text-transform: uppercase;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.service-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-category ul li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.service-category ul li strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.service-category ul li::before {
+  content: "✔";
+  color: #3498db;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+/* Call to Action */
+.services-cta {
+  background-color: #3498db;
+  color: #fff;
+  padding: 30px;
+  margin-top: 50px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services-cta h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.services-cta p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.services-cta .cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #fff;
+  color: #3498db;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.services-cta .cta-button:hover {
+  background-color: #fff;
+  color: #217dbb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-category {
+    text-align: center;
+  }
+
+  .service-category h2 {
+    font-size: 24px;
+  }
+
+  .service-category ul li {
+    font-size: 14px;
+  }
+
+  .services-cta h2 {
+    font-size: 28px;
+  }
+
+  .services-cta p {
+    font-size: 16px;
+  }
+}
