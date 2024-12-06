@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - Index Building Group</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      const menuIcon = document.querySelector('.menu-icon');
+      navLinks.classList.toggle('active');
+    
+      // Toggle between hamburger and close icon
+      if (navLinks.classList.contains('active')) {
+          menuIcon.innerHTML = '&times;'; // Close icon
+      } else {
+          menuIcon.innerHTML = '&#9776;'; // Hamburger icon
+      }
+    }
+      </script>
 </head>
 <body>
 

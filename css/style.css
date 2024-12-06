@@ -596,7 +596,9 @@ body {
 .project-page {
   background-color: #f4f4f4;
   text-align: center;
-  margin-top: calc(50px + var(--nav-height)); /* 留出10px的间距 */
+  margin-top: calc(50px + var(--nav-height)); /* 留出10px的间距 */;
+  margin-bottom: 50px;
+
 }
 
 
@@ -632,11 +634,13 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   object-fit: cover;
+  margin-left: 20px;
 }
 
 .photo-grid-item .photo-description {
   flex: 1;
   text-align: left;
+  margin: 20px;
 }
 
 .photo-grid-item h3 {
@@ -652,6 +656,7 @@ body {
 /* 奇数项：图片在右，描述在左 */
 .photo-grid-item:nth-child(odd) {
   flex-direction: row-reverse;
+   margin-right: 20px;
 }
 
 
@@ -723,6 +728,8 @@ body {
 .contact-page {
   padding: 50px 20px;
   text-align: center;
+  margin-top: calc(50px + var(--nav-height)); /* 留出10px的间距 */;
+
 }
 
 .contact-header {
