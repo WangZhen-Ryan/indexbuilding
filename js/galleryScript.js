@@ -4,48 +4,48 @@ const projects = {
     title: "Villa Sereno",
     description: "An elegant modern home with stunning architecture and an infinity pool design.",
     images: [
-      { url: "images/gallery/0.png", caption: "Infinity pool with breathtaking views" },
-      { url: "images/gallery/0.png", caption: "Modern architecture with clean lines" },
-      { url: "images/gallery/0.png", caption: "Spacious living room with natural light" }
+      { url: "images/gallery/img1.jpg", caption: "Infinity pool with breathtaking views" },
+      { url: "images/gallery/img7.jpg", caption: "Modern architecture with clean lines" },
+      { url: "images/gallery/img8.jpg", caption: "Spacious living room with natural light" }
     ]
   },
   2: {
     title: "Hikari House",
     description: "A Japanese-inspired home featuring natural materials and a serene aesthetic.",
     images: [
-      { url: "images/gallery/2.png", caption: "Front view at sunset" },
-      { url: "images/gallery/3.png", caption: "Interior with Japanese flair" },
-      { url: "images/gallery/4.png", caption: "A harmonious design that blends with nature" },
-      { url: "images/gallery/5.png", caption: "Elegant dining and kitchen area" }
+      { url: "images/gallery/img2.jpg", caption: "Front view at sunset" },
+      { url: "images/gallery/img9.jpg", caption: "Interior with Japanese flair" },
+      { url: "images/gallery/img10.jpg", caption: "A harmonious design that blends with nature" },
+      { url: "images/gallery/img11.jpg", caption: "Elegant dining and kitchen area" }
     ]
   },
   3: {
       title: "jason House",
       description: "A Japanese-inspired home featuring natural materials and a serene aesthetic.",
       images: [
-        { url: "images/gallery/3.png", caption: "Front view at sunset" },
-        { url: "images/gallery/4.png", caption: "Interior with Japanese flair" },
-        { url: "images/gallery/5.png", caption: "A harmonious design that blends with nature" },
-        { url: "images/gallery/6.png", caption: "Elegant dining and kitchen area" }
+        { url: "images/gallery/img3.jpg", caption: "Front view at sunset" },
+        { url: "images/gallery/img7.jpg", caption: "Interior with Japanese flair" },
+        { url: "images/gallery/img8.jpg", caption: "A harmonious design that blends with nature" },
+        { url: "images/gallery/img9.jpg", caption: "Elegant dining and kitchen area" }
       ],
     },
   4: {
         title: "jason House",
         description: "A Japanese-inspired home featuring natural materials and a serene aesthetic.",
         images: [
-          { url: "images/gallery/4.png", caption: "Front view at sunset" },
-          { url: "images/gallery/5.png", caption: "Interior with Japanese flair" },
-          { url: "images/gallery/6.png", caption: "A harmonious design that blends with nature" },
+          { url: "images/gallery/img4.jpg", caption: "Front view at sunset" },
+          { url: "images/gallery/img5.jpg", caption: "Interior with Japanese flair" },
+          { url: "images/gallery/img6.jpg", caption: "A harmonious design that blends with nature" },
         ],
       },
   5: {
           title: "ryan House",
           description: "A Japanese-inspired home featuring natural materials and a serene aesthetic.",
           images: [
-            { url: "images/gallery/5.png", caption: "Front view at sunset" },
-            { url: "images/gallery/6.png", caption: "Interior with Japanese flair" },
-            { url: "images/gallery/7.png", caption: "A harmonious design that blends with nature" },
-            { url: "images/gallery/8.png", caption: "Elegant dining and kitchen area" }
+            { url: "images/gallery/img5.jpg", caption: "Front view at sunset" },
+            { url: "images/gallery/img6.jpg", caption: "Interior with Japanese flair" },
+            { url: "images/gallery/img7.jpg", caption: "A harmonious design that blends with nature" },
+            { url: "images/gallery/img8.jpg", caption: "Elegant dining and kitchen area" }
           ]
   
   }
@@ -58,38 +58,38 @@ $(function() {
   const projectId = getProjectId();
   if (projectId === "1") {
     images_url = [
-        "images/gallery/0.png",
-        "images/gallery/1.png",
-        "images/gallery/2.png"
+        "images/gallery/img1.jpg",
+        "images/gallery/img7.jpg",
+        "images/gallery/img8.jpg"
     ];
 } else if (projectId === "2") {
     images_url = [
-      "images/gallery/2.png",
-      "images/gallery/3.png",
-      "images/gallery/4.png",
-        "images/gallery/5.png"
+      "images/gallery/img2.jpg",
+      "images/gallery/img9.jpg",
+      "images/gallery/img10.jpg",
+        "images/gallery/img11.jpg"
     ];
 } else if (projectId === "3") {
     images_url = [
-      "images/gallery/3.png",
-      "images/gallery/4.png",
-      "images/gallery/5.png",
-        "images/gallery/6.png"
+      "images/gallery/img3.jpg",
+      "images/gallery/img7.jpg",
+      "images/gallery/img8.jpg",
+        "images/gallery/img9.jpg"
     ];
 }
 else if (projectId === "4") {
   images_url = [
-    "images/gallery/4.png",
-    "images/gallery/5.png",
-    "images/gallery/6.png",
+    "images/gallery/img4.jpg",
+    "images/gallery/img5.jpg",
+    "images/gallery/img6.jpg",
      
   ];
 } 
 else if (projectId === "5") {
   images_url = [
-    "images/gallery/5.png",
-    "images/gallery/6.png",
-    "images/gallery/7.png",
+    "images/gallery/img5.jpg",
+    "images/gallery/img6.jpg",
+    "images/gallery/img7.jpg",
      
   ];
 } else {
